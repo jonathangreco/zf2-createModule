@@ -32,3 +32,8 @@ MyModule/{config,tests/MyModuleTest/{Controller,Framework,Util},src/MyModule/{Co
 ```
 Go into you module directory in command line and paste it, 
 your tree will be generated.
+
+Improvements
+------------
+This tool can, and it will be, improved.
+In this actual version this tool does not generate content into generic file like Module.php, you have to put the code yourself.
