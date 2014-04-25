@@ -11,7 +11,7 @@
 
 if($_POST['module']) {
 	$str = $_POST['module'];
-	$string = "mkdir -pv ".ucfirst($str)."/{config,tests/".ucfirst($str)."Test/{Controller,Framework,Util},src/".ucfirst($str)."/{Controller,Form,Entity,Factory,Service},view/".$str."/".$str.",language}
+	$string = "mkdir -pv ".ucfirst($str)."/{config,tests/".ucfirst($str)."Test/{Controller,Framework,Util,Service},src/".ucfirst($str)."/{Controller,Form,Entity,Factory,Service},view/".$str."/".$str.",language}
 	|touch ".ucfirst($str)."/Module.php
 	|touch ".ucfirst($str)."/autoload_classmap.php
 	|touch ".ucfirst($str)."/config/module.config.php
@@ -21,7 +21,8 @@ if($_POST['module']) {
 	|touch ".ucfirst($str)."/tests/".ucfirst($str)."Bootstrap.php
 	|touch ".ucfirst($str)."/tests/TestConfig.php
 	|touch ".ucfirst($str)."/tests/".ucfirst($str)."Test/Framework/TestCase.php
-	|touch ".ucfirst($str)."/tests/".ucfirst($str)."Test/Util/ServiceManagerFactory.php";
+	|touch ".ucfirst($str)."/tests/".ucfirst($str)."Test/Util/ServiceManagerFactory.php
+	|touch ".ucfirst($str)."/tests/".ucfirst($str)."Test/Service/".ucfirst($str)."ServiceTest.php";
 
 	echo '--------------------------------------------------<br/>';
 	echo "<div style='width : 500px;'>";
