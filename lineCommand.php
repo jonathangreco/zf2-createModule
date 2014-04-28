@@ -11,18 +11,20 @@
 
 if($_POST['module']) {
 	$str = $_POST['module'];
-	$string = "mkdir -pv ".ucfirst($str)."/{config,tests/".ucfirst($str)."Test/{Controller,Framework,Util,Service},src/".ucfirst($str)."/{Controller,Form,Entity,Factory,Service},view/".strtolower($str)."/".strtolower($str).",language}
-	|touch ".ucfirst($str)."/Module.php
-	|touch ".ucfirst($str)."/autoload_classmap.php
-	|touch ".ucfirst($str)."/config/module.config.php
-	|touch ".ucfirst($str)."/language/en_US.po
-	|touch ".ucfirst($str)."/language/fr_FR.po
-	|touch ".ucfirst($str)."/src/".ucfirst($str)."/Controller/".ucfirst($str)."Controller.php
-	|touch ".ucfirst($str)."/tests/".ucfirst($str)."Bootstrap.php
-	|touch ".ucfirst($str)."/tests/TestConfig.php
-	|touch ".ucfirst($str)."/tests/".ucfirst($str)."Test/Framework/TestCase.php
-	|touch ".ucfirst($str)."/tests/".ucfirst($str)."Test/Util/ServiceManagerFactory.php
-	|touch ".ucfirst($str)."/tests/".ucfirst($str)."Test/Service/".ucfirst($str)."ServiceTest.php";
+	$lowerStr = strtolower($str);
+	$ucFirstStr = ucfirst($str);
+	$string = "mkdir -pv ".$ucFirstStr."/{config,tests/".$ucFirstStr."Test/{Controller,Framework,Util,Service},src/".$ucFirstStr."/{Controller,Form,Entity,Factory,Service},view/".$lowerStr."/".$lowerStr.",language}
+	|touch ".$ucFirstStr."/Module.php
+	|touch ".$ucFirstStr."/autoload_classmap.php
+	|touch ".$ucFirstStr."/config/module.config.php
+	|touch ".$ucFirstStr."/language/en_US.po
+	|touch ".$ucFirstStr."/language/fr_FR.po
+	|touch ".$ucFirstStr."/src/".$ucFirstStr."/Controller/".$ucFirstStr."Controller.php
+	|touch ".$ucFirstStr."/tests/".$ucFirstStr."Bootstrap.php
+	|touch ".$ucFirstStr."/tests/TestConfig.php
+	|touch ".$ucFirstStr."/tests/".$ucFirstStr."Test/Framework/TestCase.php
+	|touch ".$ucFirstStr."/tests/".$ucFirstStr."Test/Util/ServiceManagerFactory.php
+	|touch ".$ucFirstStr."/tests/".$ucFirstStr."Test/Service/".$ucFirstStr."ServiceTest.php";
 
 	echo '--------------------------------------------------<br/>';
 	echo "<div style='width : 500px;'>";
