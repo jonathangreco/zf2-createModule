@@ -17,7 +17,7 @@ if($_POST['module']) {
 	|touch ".$ucFirstStr."/Module.php
 	|touch ".$ucFirstStr."/autoload_classmap.php
 	|touch ".$ucFirstStr."/config/module.config.php
-	|touch ".$ucFirstStr."/language/en_US.po
+	|touch ".$ucFirstStr."/language/fr_FR.mo
 	|touch ".$ucFirstStr."/language/fr_FR.po
 	|touch ".$ucFirstStr."/src/".$ucFirstStr."/Controller/".$ucFirstStr."Controller.php
 	|touch ".$ucFirstStr."/tests/".$ucFirstStr."Bootstrap.php
