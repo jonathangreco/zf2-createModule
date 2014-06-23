@@ -9,3 +9,18 @@ This lineCommand is not tested yet for module with name like MyModule. Only modu
 
 This tools is far from perfect, if you have some hint to provide feel free to do it.
 
+Information
+___________
+This line Command tool works only with WampServer and  suppose that you have a default path for your www directory
+
+Installation
+___________
+You have to create in your www directory a folder named : Tools. Paste all this files and /Provider in it.
+
+Go with line command on the main directory of your project. And paste the result of this tool with your new module.
+
+And Enjoy. :)
+
+Please : be aware that you have to check first if your module name doesn't exist already, if yes, it may be a problem (rewrite possible)
+
+
