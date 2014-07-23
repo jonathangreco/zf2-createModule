@@ -17,8 +17,10 @@ if($_POST['module']) {
 	|touch ".$ucFirstStr."/Module.php
 	|touch ".$ucFirstStr."/autoload_classmap.php
 	|touch ".$ucFirstStr."/config/module.config.php
-	|touch ".$ucFirstStr."/language/fr_FR.mo
-	|touch ".$ucFirstStr."/language/fr_FR.po
+	|touch ".$ucFirstStr."/language/FlashMessage/en_US-flashMessage.php
+	|touch ".$ucFirstStr."/language/FlashMessage/fr_FR.flashMessage.php
+	|touch ".$ucFirstStr."/language/fr_FR.global.php
+	|touch ".$ucFirstStr."/language/en_US.global.php
 	|touch ".$ucFirstStr."/src/".$ucFirstStr."/Controller/".$ucFirstStr."Controller.php
 	|touch ".$ucFirstStr."/tests/".$ucFirstStr."Bootstrap.php
 	|touch ".$ucFirstStr."/tests/TestConfig.php
