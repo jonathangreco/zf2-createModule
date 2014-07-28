@@ -2,8 +2,8 @@
 <html>
 <head>
 	<title>New Module</title>
-	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/default.min.css"/>
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js"></script>
+	<link rel="stylesheet" href="styles/default.css"/>
+	<script src="highlight.pack.js"></script>
 	<script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body style="width : 960px; margin: auto;">
@@ -33,8 +33,8 @@ if($_POST['module']) {
 	|touch ".$ucFirstStr."/tests/".$ucFirstStr."Test/Service/".$ucFirstStr."ServiceTest.php";
 
 	echo '--------------------------------------------------<br/>';
-	echo '<h1>Version &agrave; jeter</h1>';
-	echo "<div style='width : 900px; background-color:red;'><pre><code type='cmd'>";
+	echo '<h1>Version &agrave; jeter (cr&eacute;e des fichiers vides)</h1>';
+	echo "<div style='width : 900px; background-color:red;'><pre><code type='sh'>";
 	echo $string2;
 	echo "</code></pre></div>";
 	echo '<br/>--------------------------------------------------';
@@ -60,7 +60,7 @@ if($_POST['module']) {
 	| mv module/'. $ucFirstStr . '/src/'. $ucFirstStr . '/Service/ProviderService.php 
 		module/'. $ucFirstStr . '/src/'. $ucFirstStr . '/Service/'. $ucFirstStr . 'Service.php
 	| mv module/'. $ucFirstStr . '/view/provider/ module/'. $ucFirstStr . '/view/'. $lowerStr . '
-	| mv module/'. $ucFirstStr . '/view/'. $lowerStr . '/provider/ module/'. $ucFirstStr . '/view/'. $lowerStr . '/' . $lowerStr .'
+	| mv module/'. $ucFirstStr . '/view/'. $lowerStr . '/provider/ module/'. $ucFirstStr . '/view/'. $lowerStr . '/' . $lowerStr .'/
 	| mv module/'. $ucFirstStr . '/tests/ProviderTest module/'. $ucFirstStr .'/tests/'. $ucFirstStr .'Test
 	| mv module/'. $ucFirstStr . '/tests/ProviderBootstrap.php module/'. $ucFirstStr .'/tests/' . $ucFirstStr.'Bootstrap.php
 	| mv module/'. $ucFirstStr . '/tests/' .$ucFirstStr . 'Test/Controller/ProviderControllerTest.php
@@ -71,7 +71,7 @@ if($_POST['module']) {
 
 	echo '--------------------------------------------------<br/>';
 	echo '<h1>Version &agrave; pr&eacute;f&eacute;rer</h1>';
-	echo "<div style='width : 900px; background-color:;'><pre><code type='cmd'> ";
+	echo "<div style='width : 900px; background-color:;'><pre><code type='sh'> ";
 	echo $string;
 	echo "</code></pre></div>";
 	echo '<br/>--------------------------------------------------';
