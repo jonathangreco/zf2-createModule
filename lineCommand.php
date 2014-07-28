@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>New Module</title>
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/default.min.css"/>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body style="width : 960px; margin: auto;">
 
@@ -13,7 +16,8 @@ if($_POST['module']) {
 	$str = $_POST['module'];
 	$lowerStr = strtolower($str);
 	$ucFirstStr = ucfirst($str);
-	$string2 = "mkdir -pv ".$ucFirstStr."/{config,tests/".$ucFirstStr."Test/{Controller,Framework,Util,Service},src/".$ucFirstStr."/{Controller,Form,Entity,Factory,Service},view/".$lowerStr."/".$lowerStr.",language}
+	$string2 = "mkdir -pv ".$ucFirstStr."/{config,tests/".$ucFirstStr."Test/{Controller,Framework,Util,Service},
+	src/".$ucFirstStr."/{Controller,Form,Entity,Factory,Service},view/".$lowerStr."/".$lowerStr.",language}
 	|touch ".$ucFirstStr."/Module.php
 	|touch ".$ucFirstStr."/autoload_classmap.php
 	|touch ".$ucFirstStr."/config/module.config.php
@@ -30,9 +34,9 @@ if($_POST['module']) {
 
 	echo '--------------------------------------------------<br/>';
 	echo '<h1>Version &agrave; jeter</h1>';
-	echo "<div style='width : 900px; background-color:red;'>";
+	echo "<div style='width : 900px; background-color:red;'><pre><code type='cmd'>";
 	echo $string2;
-	echo "</div>";
+	echo "</code></pre></div>";
 	echo '<br/>--------------------------------------------------';
 	echo '<br/>';
 }
@@ -45,7 +49,7 @@ if($_POST['module']) {
 
 	$string = 'cp -r C:/wamp/www/Tools/Provider module/'.$ucFirstStr. '
 	| chmod -R 777 module/' . $ucFirstStr .'
-	| find . -type f -exec sed -i "s/Provider/'.$ucFirstStr.'/g" /module/*.*\;
+	| find . -type f -exec sed -i "s/Provider/'.$ucFirstStr.'/g" {} \;
 	| mv module/'. $ucFirstStr . '/src/Provider/ module/'. $ucFirstStr . '/src/'. $ucFirstStr . '
 	| mv module/'. $ucFirstStr . '/src/'. $ucFirstStr . '/Controller/ProviderController.php 
 		module/'. $ucFirstStr . '/src/'. $ucFirstStr . '/Controller/'. $ucFirstStr . 'Controller.php
@@ -67,9 +71,9 @@ if($_POST['module']) {
 
 	echo '--------------------------------------------------<br/>';
 	echo '<h1>Version &agrave; pr&eacute;f&eacute;rer</h1>';
-	echo "<div style='width : 900px; background-color:green;'> ";
+	echo "<div style='width : 900px; background-color:;'><pre><code type='cmd'> ";
 	echo $string;
-	echo "</div>";
+	echo "</code></pre></div>";
 	echo '<br/>--------------------------------------------------';
 	echo '<br/>';
 }
