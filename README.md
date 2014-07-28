@@ -20,7 +20,7 @@ Installation
 
 You have to create in your www directory a folder named : Tools. Paste all this files and /Provider in it.
 
-Go with line command on the main directory of your project. And paste the result of this tool with your new module.
+Go with line command on tools directory then go to newModule. And paste the result of this tool. This will make a tree of you new module then you have just to copy this folder into your module folder on your application. And of course activate this new module.
 
 And Enjoy. :)
 
