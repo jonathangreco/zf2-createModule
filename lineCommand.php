@@ -49,8 +49,8 @@ if($_POST['module']) {
 
 	$string = 'cp -r C:/wamp/www/Tools/Provider module/'.$ucFirstStr. '
 	| chmod -R 777 module/' . $ucFirstStr .'
-	| find . -type f -exec sed -i "s/Provider/'.$ucFirstStr.'/g" {} \;
-	| find . -type f -exec sed -i "s/provider/'.$lowerStr.'/g" {} \;
+	| find . -type f -name "*.php" -exec sed -i "s/Provider/'.$ucFirstStr.'/g" {} \;
+	| find . -type f -name "*.php" -exec sed -i "s/provider/'.$lowerStr.'/g" {} \;
 	| mv module/'. $ucFirstStr . '/src/Provider/ module/'. $ucFirstStr . '/src/'. $ucFirstStr . '
 	| mv module/'. $ucFirstStr . '/src/'. $ucFirstStr . '/Controller/ProviderController.php 
 		module/'. $ucFirstStr . '/src/'. $ucFirstStr . '/Controller/'. $ucFirstStr . 'Controller.php
