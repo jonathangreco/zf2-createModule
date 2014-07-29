@@ -50,6 +50,7 @@ if($_POST['module']) {
 	$string = 'cp -r C:/wamp/www/Tools/Provider module/'.$ucFirstStr. '
 	| chmod -R 777 module/' . $ucFirstStr .'
 	| find . -type f -exec sed -i "s/Provider/'.$ucFirstStr.'/g" {} \;
+	| find . -type f -exec sed -i "s/provider/'.$lowerStr.'/g" {} \;
 	| mv module/'. $ucFirstStr . '/src/Provider/ module/'. $ucFirstStr . '/src/'. $ucFirstStr . '
 	| mv module/'. $ucFirstStr . '/src/'. $ucFirstStr . '/Controller/ProviderController.php 
 		module/'. $ucFirstStr . '/src/'. $ucFirstStr . '/Controller/'. $ucFirstStr . 'Controller.php
@@ -66,14 +67,15 @@ if($_POST['module']) {
 	| mv module/'. $ucFirstStr . '/tests/' .$ucFirstStr . 'Test/Controller/ProviderControllerTest.php
 		module/'. $ucFirstStr . '/tests/' .$ucFirstStr . 'Test/Controller/' . $ucFirstStr . 'ControllerTest.php
 	| mv module/'. $ucFirstStr . '/tests/' .$ucFirstStr . 'Test/Service/ProviderServiceTest.php
-		module/'. $ucFirstStr . '/tests/' .$ucFirstStr . 'Test/Service/' . $ucFirstStr . 'ServiceTest.php'
+		module/'. $ucFirstStr . '/tests/' .$ucFirstStr . 'Test/Service/' . $ucFirstStr . 'ServiceTest.php
+	| mkdir module/'. $ucFirstStr . '/src/'. $ucFirstStr . '/Entity'
 	;
 
 	echo '--------------------------------------------------<br/>';
 	echo '<h1>Version &agrave; pr&eacute;f&eacute;rer</h1>';
-	echo "<div style='width : 900px; background-color:;'><pre><code type='sh'> ";
+	echo "<div style='width : 900px; background-color:;'><code type='sh'> ";
 	echo $string;
-	echo "</code></pre></div>";
+	echo "</code></div>";
 	echo '<br/>--------------------------------------------------';
 	echo '<br/>';
 }
