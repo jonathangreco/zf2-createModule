@@ -19,8 +19,10 @@ class ProviderService implements ServiceLocatorAwareInterface
 {
     use ServiceLocatorAwareTrait;
 
-    public function __construct(ObjectManager $em)
+    public function __construct(ToolboxService $toolbox)
     {
-        $this->em = $em;
+        $this->toolboxService = $toolbox;
+        $this->myLinkUn = $this->toolboxService->getMyLinkUn();
+        $this->dao = $this->toolboxService->getDao();
     }
 }

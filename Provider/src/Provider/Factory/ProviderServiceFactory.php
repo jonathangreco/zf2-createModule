@@ -19,8 +19,8 @@ class ProviderServiceFactory implements FactoryInterface
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
         /** @var ObjectManager $objectManager */
-        $objectManager = $serviceLocator->get('doctrine.entitymanager.orm_default');
-        return new ProviderService($objectManager);
+        $toolboxService = $serviceLocator->get('Application\Service\ToolBoxService');
+        return new ProviderService($toolboxService);
     }
 }
 

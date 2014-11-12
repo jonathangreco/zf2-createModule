@@ -33,9 +33,14 @@ return array(
         'locale' => 'fr_FR',
         'translation_file_patterns' => array(
             array(
-                'type'     => 'gettext',
+                'type'     => 'phpArray',
                 'base_dir' => __DIR__ . '/../language',
-                'pattern'  => '%s.mo',
+                'pattern'  => '%s.global.php',
+            ),
+            array(
+                'type' => 'phpArray',
+                'base_dir' => __DIR__ . '/../language/FlashMessage/',
+                'pattern'  => '%s-flashMessage.php',
             ),
         ),
     ),
