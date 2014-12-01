@@ -4,7 +4,7 @@ zf2-createModule
 UPDATE
 ======
 
-New feature available, you can easily duplicade The Provider Module for create a new module with all generic code.
+New feature available, you can easily duplicade The Tutorial Module for create a new module with all generic code.
 This line Command will rename all the file with PSR-0 friendly, and folder too. All generic file will be modified with namespace and class names
 This lineCommand is not tested yet for module with name like MyModule. Only module with one Words are tested.
 
@@ -18,9 +18,9 @@ ___________
 Installation
 ============
 
-You have to create in your www directory a folder named : Tools. Paste all this files and /Provider in it.
+You have to create in your www directory a folder named : Tools. Paste all this files and /Tutorial in it.
 
-Go with line command on tools directory then go to newModule. And paste the result of this tool. This will make a tree of you new module then you have just to copy this folder into your module folder on your application. And of course activate this new module.
+Go with line command on the main directory of your project. And paste the result of this tool with your new module.
 
 And Enjoy. :)
 

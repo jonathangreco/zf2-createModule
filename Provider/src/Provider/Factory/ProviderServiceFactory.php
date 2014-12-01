@@ -18,9 +18,7 @@ class ProviderServiceFactory implements FactoryInterface
 
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
-        /** @var ObjectManager $objectManager */
-        $toolboxService = $serviceLocator->get('Application\Service\ToolBoxService');
-        return new ProviderService($toolboxService);
+        return new ProviderService();
     }
 }
 

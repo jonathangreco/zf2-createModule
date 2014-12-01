@@ -18,11 +18,4 @@ use Doctrine\Common\Persistence\ObjectManager;
 class ProviderService implements ServiceLocatorAwareInterface
 {
     use ServiceLocatorAwareTrait;
-
-    public function __construct(ToolboxService $toolbox)
-    {
-        $this->toolboxService = $toolbox;
-        $this->myLinkUn = $this->toolboxService->getMyLinkUn();
-        $this->dao = $this->toolboxService->getDao();
-    }
 }
